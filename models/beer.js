@@ -5,8 +5,8 @@ var BeerSchema = new Schema({
   name : String,
   type : String,
   labelImage : String,
-  ibu : Number,
-  abv : Number,
+  ibu : String,
+  abv : String,
   tasteProfile : String,
   awards : String
 })
