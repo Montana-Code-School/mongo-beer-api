@@ -2,6 +2,12 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+var Beer = require('./beerAPI/models/beer');
+var Brewery = require('./beerAPI/models/brewery');
+
+
+mongoose.connect('mongodb://localhost/beerAPI');
 
 
 var port = 3000;
