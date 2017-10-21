@@ -11,4 +11,4 @@ var BeerSchema = new Schema({
   awards : String
 })
 
-model.exports = mongoose.model('Beer', BeerSchema);
+module.exports = mongoose.model('Beer', BeerSchema);
