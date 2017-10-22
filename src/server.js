@@ -13,9 +13,13 @@ mongoose.connect('mongodb://localhost/beerAPI');
 
 var port = 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../src/client')));
 app.use(bodyParser.urlencoded({extended: true }));
 app.use(bodyParser.json());
+
+app.get('/', function(req, res) {
+  res.sendFile('index.html');
+});
 
 var router = express.Router();
 
