@@ -63,7 +63,7 @@ router.route('/beers')
     });
 
 
-  router.route('/breweries')
+  router.route('/brewery')
   // create a brewery
     .post(function(req, res){
       var brewery = new Brewery();
@@ -92,18 +92,47 @@ router.route('/beers')
     })
 
   // update all breweries
-//   router.route('/breweries/:breweryid')
-//   .put(function(req, res){
-// //    Model.findByIdAndUpdate(id, updateObj, {new: true}, function(err, model) {...
-//     Brewery.findByIdAndUpdate(req.params.breweryid, req.body, function(err, brewery){
-//       if (err) {
-//         res.send(err);
-//       }
-//       res.json(brewery)
-//     });
-//   })
+  router.route('/brewery/:breweryid')
+
+  .get(function(req, res){
+    findById(req.params.brewery, function(err, brewery){
+      if(err)
+        res.send(err);
+      res.json(brewery);
+    });
+  })
+
+  .put(function(req, res){
+//    Model.findByIdAndUpdate(id, updateObj, {new: true}, function(err, model) {...
+    Brewery.findByIdAndUpdate(req.params.breweryid, req.body, {new: true}, function(err, brewery){
+      console.log(req.body)
+      if (err)
+        res.send(err);
+
+        // brewery.name = req.body.name;
+        // brewery.address = req.body.address;
+        // brewery.awards = req.body.awards;
+        // brewery.foodAvailable = req.body.foodAvailable;
+        // brewery.beers = req.body.beers;
+        res.json(brewery);
+
+    });
+  })
+
+  .delete(function(req, res){
+    Brewery.remove({
+      breweryid: req.params.breweryid
+    }, function(err, brewery) {
+      if (err)
+      res.send(err);
+
+      res.json({message : 'You did it'});
+    });
+  });
+
+
 
 app.use('/api', router);
 
 app.listen(port);
-console.log('magic ' + port);
+//console.log('magic ' + port);
