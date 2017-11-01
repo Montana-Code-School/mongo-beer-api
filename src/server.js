@@ -7,9 +7,7 @@ const mongoose = require('mongoose');
 var Beer = require('./models/beer');
 var Brewery = require('./models/brewery');
 
-
 mongoose.connect('mongodb://localhost/beerAPI');
-
 
 var port = 3000;
 
@@ -53,14 +51,14 @@ router.route('/beers')
     });
   })
   // get all beers
-    .get(function(req, res){
-      Beer.find(function(err, beers){
-        if (err){
-        res.send(err);
-        }
-        res.json(beers);
-      });
+  .get(function(req, res){
+    Beer.find(function(err, beers){
+      if (err){
+      res.send(err);
+      }
+      res.json(beers);
     });
+  });
 
 
   router.route('/brewery')
