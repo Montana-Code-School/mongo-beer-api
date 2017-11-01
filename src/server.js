@@ -61,6 +61,29 @@ router.route('/beers')
         res.json(beers);
       });
     });
+    router.route('/beer/:beerid')
+    .put(function(req, res){
+  //    Model.findByIdAndUpdate(id, updateObj, {new: true}, function(err, model) {...
+      Beer.findByIdAndUpdate(req.params.beerid, req.body, {new: true}, function(err, beer){
+        console.log(req.body);
+        if (err)
+          res.send(err);
+
+          res.json(beer);
+
+      });
+    })
+
+    .delete(function(req, res){
+      Beer.remove({
+        beerid: req.params.beerid
+      }, function(err, beer) {
+        if (err)
+        res.send(err);
+
+        res.json({message : 'You did it'});
+      });
+    });
 
 
   router.route('/brewery')
@@ -109,11 +132,6 @@ router.route('/beers')
       if (err)
         res.send(err);
 
-        // brewery.name = req.body.name;
-        // brewery.address = req.body.address;
-        // brewery.awards = req.body.awards;
-        // brewery.foodAvailable = req.body.foodAvailable;
-        // brewery.beers = req.body.beers;
         res.json(brewery);
 
     });
