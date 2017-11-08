@@ -9,7 +9,7 @@ var Brewery = require('./models/brewery');
 
 mongoose.connect('mongodb://localhost/beerAPI');
 
-var port = 3000;
+var port = 3001;
 
 app.use(express.static(path.join(__dirname, '../src/client')));
 app.use(bodyParser.urlencoded({extended: true }));
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -141,8 +141,6 @@ router.route('/beers')
       res.json({message : 'You did it'});
     });
   });
-
-
 
 app.use('/api', router);
 

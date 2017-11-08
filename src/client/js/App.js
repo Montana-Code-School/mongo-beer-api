@@ -8,11 +8,7 @@ import Stylefyle from './components/Stylefyle';
 class App extends React.Component {
   render(){
     return (
-    <div>
-      <Beer/>
       <Stylefyle/>
-      <Brewery/>
-    </div>
     )
   }
 }

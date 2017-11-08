@@ -7,14 +7,12 @@ export default class Beer extends React.Component {
     super();
     this.state = {beers : []};
   }
-
-
-  componentDidMount(){
-    axios.get('localhost:3000/beers')
-    .then(function(response) {
-      this.setState({beers: response})
-    })
-  }
+  // componentDidMount(){
+  // //  axios.get('localhost:3000/beers')
+  //   .then(function(response) {
+  //     this.setState({beers: response})
+  //   })
+  // }
   render(){
     return (
     <div>

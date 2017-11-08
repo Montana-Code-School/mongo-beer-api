@@ -3169,13 +3169,7 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_Beer2.default, null),
-        _react2.default.createElement(_Stylefyle2.default, null),
-        _react2.default.createElement(_Brewery2.default, null)
-      );
+      return _react2.default.createElement(_Stylefyle2.default, null);
     }
   }]);
 
@@ -12952,15 +12946,15 @@ var Beer = function (_React$Component) {
     _this.state = { beers: [] };
     return _this;
   }
+  // componentDidMount(){
+  // //  axios.get('localhost:3000/beers')
+  //   .then(function(response) {
+  //     this.setState({beers: response})
+  //   })
+  // }
+
 
   _createClass(Beer, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      _axios2.default.get('localhost:3000/beers').then(function (response) {
-        this.setState({ beers: response });
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -14862,8 +14856,57 @@ var Stylefyle = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement('div', { style: columnStyle })
+        { className: 'container' },
+        _react2.default.createElement(
+          'div',
+          { className: 'tamarack' },
+          'Tamarack'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'kettlehouse' },
+          'Kettlehouse'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'draughtworks' },
+          'Draught Works'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'bigsky' },
+          'Big Sky'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'imaginenation' },
+          'Imagination'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'bayern' },
+          'Bayern'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'greatburn' },
+          'Great Burn'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'lolopeak' },
+          'Lolo Peak'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'flatheadlake' },
+          'Flathead Lake'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'highlander' },
+          'Highlander'
+        )
       );
     }
   }]);

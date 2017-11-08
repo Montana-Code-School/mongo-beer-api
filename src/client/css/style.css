@@ -1,0 +1,61 @@
+html,body,#root{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: bold;
+  height: 100%;
+}
+.container div{
+  flex: 1 1 0;
+  height: 100%;
+  margin: auto;
+}
+.tamarack{
+  background-image: url(https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/74802/1360/906/m1/fpnw/wm1/beer-background-.jpg?1392368406&s=145daf4128dd2da958fc59d11fbcf249);
+  background-position: center;
+}
+.kettlehouse{
+  background-image: url(http://www.craftsondraft.com/wp-content/uploads/2014/12/San-Diego-Brewery-Tour-Beer-Background10.jpg);
+  background-position: center;
+}
+.draughtworks{
+  background-image: url(https://previews.123rf.com/images/westa/westa1104/westa110400005/9209208-BEER-TEXTURE-Stock-Photo-beer-background-bubbles.jpg);
+  background-position: center;
+}
+.bigsky{
+  background-image: url(https://previews.123rf.com/images/nitr/nitr1202/nitr120200017/12449731-mug-of-beer-as-background-Stock-Photo-foam.jpg);
+  background-position: center;
+}
+.imaginenation{
+  background-image: url(https://i.ytimg.com/vi/fOQRn1Spopc/maxresdefault.jpg);
+  background-position: center;
+}
+.bayern{
+  background-image: url(http://wallsdesk.com/wp-content/uploads/2016/10/Beer-Background.jpg);
+  background-position: center;
+}
+.greatburn{
+  background-image: url(https://static6.depositphotos.com/1053646/583/i/950/depositphotos_5833032-stock-photo-abstract-beer-background.jpg);
+  background-position: center;
+}
+.lolopeak{
+  background-image:url(https://steamuserimages-a.akamaihd.net/ugc/669083114972409810/341B1635C76AED2DA8B078166EC39DE1D48C61FE/);
+  background-position: center;
+}
+.flatheadlake{
+  background-image: url(http://vtsports.com/wp-content/uploads/2014/03/vtbeer-CMYK.jpg);
+  background-position: center;
+}
+.highlander{
+  background-image: url(https://previews.123rf.com/images/nataliagesto/nataliagesto1201/nataliagesto120100163/11988962-Surface-texture-of-a-cold-beer-glass-as-background-Stock-Photo.jpg);
+  background-position: center;
+}
